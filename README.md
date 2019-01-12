@@ -14,12 +14,15 @@ There are six modes. The following explains the flags every mode needs when gene
 
 
 Generating the EMI case
+
 -	tg mode
+
 for tg mode , we choose the ALL mode to inject the true guard.
 Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions –tg 1’ to generate the tg cases,
 Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions –tg 0’ to generate the tg_off cases, these cases are the base cases which have no true guard.
 
 
 -	fg mode
+
 for fg mode, we alse choose the ALL mode to construct false block
 Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm --atomics --atomic_reductions --emi’ to generate fg cases

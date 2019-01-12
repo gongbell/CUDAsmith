@@ -1,7 +1,7 @@
 # CUDAsmith
 A CUDA compiler fuzzer
 
-Using the generator
+Using the generator. The current generator of CUDA kernel is built and tested for Ubuntu 16.04.2.
 
 The generator has many features for generating interesting CUDA programs. The generator is used as follows:
 ./CUDASmith [--seed <seed>] [flags]

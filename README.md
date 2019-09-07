@@ -3,6 +3,22 @@ A CUDA compiler fuzzer
 
 The current generator of CUDA kernel is built and tested for Ubuntu 16.04.2. 
 
+
+To Build the CUDASmith generator from source code, please do it as follows at the terminal:
+
+1. run ‘cd CUDAsmith-src’
+
+2. run ‘mkdir build’
+
+3. run ‘cd build’
+
+4. In build dir , run ‘cmake ..’
+
+5. Then run “make” 
+
+And CUDAsmith will be generated.
+
+
 The genkernel.sh is a script to generate 100 CUDA kernel in ALL mode.
 
 The generator has many features for generating interesting CUDA programs. The generator is used as follows:

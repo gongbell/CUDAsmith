@@ -3,6 +3,7 @@ A CUDA compiler fuzzer
 
 The current generator of CUDA kernel is built and tested for Ubuntu 16.04.2. 
 
+Please Contract Dr. Bo Jiang if you have any suggestions. (gongbell@gmail.com)
 
 To Build the CUDASmith generator from source code, please do it as follows at the terminal:
 

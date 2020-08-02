@@ -1,6 +1,12 @@
 # CUDAsmith
 A CUDA compiler fuzzer
 
+For technical descriptions, please refer to our work:
+
+Bo Jiang, Xiaoyan Wang, W.K. Chan, T.H. Tse, Na Li and Yongfeng Yin. "CUDAsmith: A Fuzzer for CUDA Compilers." to appear in Proceedings of the 44nd IEEE International Conference on Computer Software and Applications (COMPSAC 2020), IEEE Computer Society, Los Alamitos, CA (2020).
+
+http://jiangbo.buaa.edu.cn/compsac20-CUDAsmith.pdf 
+
 The current generator of CUDA kernel is built and tested for Ubuntu 16.04.2. 
 
 Please Contract Dr. Bo Jiang if you have any suggestions. (gongbell@gmail.com)

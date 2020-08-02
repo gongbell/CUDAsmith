@@ -1,6 +1,8 @@
 # CUDAsmith
 A CUDA compiler fuzzer
 
+CUDAsmith is a fuzzing framework for CUDA compilers. It can randomly generate deterministic and valid CUDA kernel code with several different strategies. Moreover, it adopts random differential testing and EMI testing techniques to solve the test oracle problems of CUDA compiler testing. CUDAsmith is an adaptation of the Csmith and CLsmith to the context of CUDA Compiler fuzzing.
+
 For technical descriptions, please refer to our work:
 
 Bo Jiang, Xiaoyan Wang, W.K. Chan, T.H. Tse, Na Li and Yongfeng Yin. "CUDAsmith: A Fuzzer for CUDA Compilers." to appear in Proceedings of the 44nd IEEE International Conference on Computer Software and Applications (COMPSAC 2020), IEEE Computer Society, Los Alamitos, CA (2020).

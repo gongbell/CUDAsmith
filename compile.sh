@@ -5,7 +5,8 @@ i=10001
 sum=20000
 while [ $i -le $sum ]
 do 
-        cp ./tg/$i.cu test.cu
+#tg directory contains the generated kernel in tg mode.
+        cp ./tg/$i.cu test.cu 
         make clean >> ./compile/clean.log 2>&1
         ./replace.sh >> ./compile/replace.log 2>&1
         timeout 60 make  >> ./compile/tg/$i.log 2>&1

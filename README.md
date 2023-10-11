@@ -54,13 +54,15 @@ Generating the EMI case
 
 For tg mode , we choose the ALL mode to inject the true guard.
 
-Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions –tg 1’ to generate the tg cases,
+Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions --TG 1’ to generate the tg cases,
 
-Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions –tg 0’ to generate the tg_off cases, these cases are the base cases which have no true guard.
+Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions --TG 0’ to generate the tg_off cases, these cases are the base cases which have no true guard.
 
 
--	fg mode
+-	fcb mode
 
-For fg mode, we alse choose the ALL mode to construct false block
+For fcb mode, we alse choose the ALL mode to construct false block
 
-Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm --atomics --atomic_reductions --emi’ to generate fg cases
+Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm --atomics --atomic_reductions --emi 1’ to generate fcb cases
+
+Uses ‘--fake_divergence --group_divergence --vectors --inter_thread_comm -- atomics --atomic_reductions --emi 0’ to generate the fcb_off cases, these cases are the base cases which have no false code block.

@@ -13,6 +13,7 @@
 #include "platform.h"
 
 extern bool g_Tgoff;
+extern bool g_FCBoff;
 
 // Generator seed.
 // static unsigned long g_Seed = 0;
@@ -70,8 +71,17 @@ int main(int argc, char **argv) {
     }
 
     if (!strcmp(argv[idx], "--emi")) {
-      CUDASmith::CUDAOptions::emi(true);
-      continue;
+        CUDASmith::CUDAOptions::emi(true);
+        long unsigned int fcb_off = 0;
+        idx++;
+        if (!CheckArgExists(idx, argc)) return -1;
+        if (!ParseIntArg(argv[idx], &fcb_off)) return -1;
+        if (fcb_off > 1 || fcb_off < 0) {
+            std::cout << "Invalid FCB argument, accept 1 or 0" << std::endl;
+            return -1;
+        }
+        g_FCBoff = !(fcb_off == 1);
+        continue;
     }
 
     if (!strcmp(argv[idx], "--emi_p_compound")) {

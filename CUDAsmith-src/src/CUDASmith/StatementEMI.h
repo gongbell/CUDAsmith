@@ -27,6 +27,9 @@
 class Block;
 class FactMgr;
 
+extern bool g_Mark;
+extern bool g_FCBoff;
+
 namespace CUDASmith {
 
 // Compound statement for an EMI section of code.
@@ -59,7 +62,14 @@ class StatementEMI : public CUDAStatement {
 
   // Outputs the EMI block. Nothing special required, delegate to StatementIf.
   void Output(std::ostream& out, FactMgr *fm, int indent) const {
-    if_block_->Output(out, fm, indent);
+    //if_block_->Output(out, fm, indent);
+      out<<"//This is FCB condition"<<endl;
+      if (g_FCBoff){
+          g_Mark = true; //附上这个条件不输出FCB语句
+      }
+      if(!g_Mark){
+          if_block_->Output(out, fm, indent);
+      }
   }
 
  private:

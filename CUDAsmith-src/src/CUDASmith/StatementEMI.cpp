@@ -17,6 +17,8 @@
 #include "StatementFor.h"
 #include "StatementIf.h"
 
+bool g_FCBoff = false;
+
 namespace CUDASmith {
 namespace {
 EMIController *emi_controller_inst = NULL;  // Singleton instance.
